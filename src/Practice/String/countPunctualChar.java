@@ -3,6 +3,8 @@ package Practice.String;
  Java Program to count the total number of punctuation characters exists in a String
  */
 
+import java.util.Arrays;
+
 public class countPunctualChar {
 	public static void main(String[] args) {
 		
@@ -59,7 +61,30 @@ public class countPunctualChar {
 		/*
 		Java Program to divide a string in 'N' equal parts.
 		 */
+		String s = "qweoiweeteooiiiiyy";
+		int n=0;
 		
+		if(s.length()%2==0) {
+			for (int i = 2; true; i++) {
+				
+				if (s.length()%i==0){
+					n=i;
+					
+				} else {
+					break;
+				}
+			}
+		}else{
+			System.out.println("Error");
+		}
+		int temp=0;
+		String[]equalsPart =new String[n];
+		for (int i = 0; i < s.length(); i+=s.length()/n) {
+				String part =s.substring(i,i+s.length()/n);
+				equalsPart[temp]=part;
+				temp++;
+		}
+		System.out.println(Arrays.toString(equalsPart));
 		
 	}
 }
