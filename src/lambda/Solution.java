@@ -15,11 +15,11 @@ public class Solution {
 		//type inference
 	}
 }
-
+@FunctionalInterface						//gives clue to developers to don't add any methods inside (coz lambda requires just ONE method in interface)
 interface MyLambda {
 	void printLength(String a);
 }
-
+@FunctionalInterface
 interface AddingFunc {
 	int Adding(int a, int b);
 }
