@@ -86,6 +86,17 @@ public class countPunctualChar {
 		}
 		System.out.println(Arrays.toString(equalsPart));
 		
+		//Java Program to find all subsets of a string
+		String w = "life";
+		String [] arr=new String[w.length()*(w.length()+1)/2];
+		int temp1=0;
+		for (int i = 0; i < w.length(); i++) {
+			for (int j = i; j < w.length(); j++) {
+			arr[temp1]=w.substring(i,j+1);
+			temp1++;
+			}
+		}
+		System.out.println(Arrays.toString(arr));
 	}
 }
 
