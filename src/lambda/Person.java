@@ -43,4 +43,8 @@ public class Person {
 				", age=" + age +
 				'}';
 	}
+	public boolean StartsWith(Person p){
+		return p.getLastName().startsWith("C");
+	}
+	
 }
