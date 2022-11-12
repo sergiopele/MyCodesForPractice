@@ -17,7 +17,6 @@ public class Solve {
 		
 		people.sort((s1, s2) -> s2.getLastName().compareTo(s1.getLastName()));    //in reverse order, in normal order s1.compareTo s2
 		
-		
 		PerformCondition(people, p -> p.getLastName().startsWith("C"), System.out::println);
 		
 	}
