@@ -29,6 +29,6 @@ public class PrimeNum {
 		}
 		result = (flag > 0) ? "Number is NOT prime" : "Number is prime";
 		System.out.println(result);
-		
+		scan.close();
 	}
 }
