@@ -1,13 +1,14 @@
 package lambda;
 
 import java.util.function.BiConsumer;
+import static java.lang.System.*;
 
 public class ExceptionHandling {
 	public static void main(String[] args) {
 		int[] numbers = {1, 2, 3, 4, 5, 6};
 		int key = 2;
 		
-		process(numbers, key, wrapperLambda((a, b) -> System.out.println(a + b)));
+		process(numbers, key, wrapperLambda((a, b) -> out.println(a + b)));
 		
 	}
 	
