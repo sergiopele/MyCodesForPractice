@@ -9,20 +9,28 @@ Also write main method that displays prime numbers between 1 to 500.
 
  */
 
+import java.math.BigInteger;
+
 public class Methods3 {
 	public static void main(String[] args) {
 		int b = (int) (Math.random() * 500 + 1);
-		System.out.println("is number " + b + " is prime? " + isPrime(b));
+		System.out.println("is number " + 1 + " is prime? " + isPrime(7));
+		System.out.println("is number " + 1 + " is prime? " + isPrimeMethod(7));
 	}
 	
 	static boolean isPrime(int a) {
-		for (int i = 2; i < a; i++) {
+		//if(a == 1) return false;
+		for (int i = 2; i < a / 2; i++) {
 			if (a % i == 0) {
 				return false;
 			}
 			
 		}
 		return true;
+	}
+	
+	static boolean isPrimeMethod(int a) {
+		return BigInteger.valueOf(a).isProbablePrime(a);
 	}
 	
 }
